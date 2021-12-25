@@ -16,14 +16,27 @@
             <h1 id="percentage">0%</h1>
         </div>
         <div id="loadingcirclefill">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="600px" height="600px">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="600px" height="600px" transform="rotate(-90)">
                 <circle cx="50%" cy="50%" r="260" stroke-linecap="round" />
             </svg>
         </div>
-
+        <h1 id="description">Loading content</h1>
     </div>
+    <canvas id="context"></canvas>
+    <div id="profilewrapper">
+        <div id="profile">
+            <div id="imagecontainer">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="320px" height="320px">
+                    <circle id="imagebordercircle" cx="50%" cy="50%" r="110" stroke-linecap="round" />
+                </svg>
+                <img src="media/images/profilepicture.png" alt="Profile Picture" id="profileimage">
+            </div>
+            <h1 id="name">iQuick</h1>
+        </div>
+    </div>
+
     <script src="scripts/loader.js"></script>
-    <script src="scripts/main.js"></script>
+    <script type="module" src="scripts/main.js"></script>
 </body>
 
 </html>
