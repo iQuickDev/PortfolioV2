@@ -19,7 +19,7 @@ function main()
 
   const scene = new THREE.Scene();
   
-    const loader = new THREE.CubeTextureLoader().setPath("../media/images/background/");
+    const loader = new THREE.CubeTextureLoader().setPath("media/images/background/");
     const texture = loader.load([
       'galaxyPosX.png',
       'galaxyNegX.png',
