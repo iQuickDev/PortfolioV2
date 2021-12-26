@@ -3,6 +3,16 @@
 
 @import "loader.css";
 
+:root
+{
+    --untouchable: -1;
+    --base-level: 1;
+    --first-layer: 2;
+    --second-layer: 3;
+    --third-layer: 4;
+    --above-all: 5;
+}
+
 *
 {
     font-family: 'Space Grotesk', sans-serif;
@@ -47,6 +57,9 @@ body
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     border-radius: 15px;
     text-align: center;
+    animation: profilepanelgrow 1s linear forwards;
+    transform: scale(0);
+    z-index: var(--third-layer);
 }
 
 #imagecontainer
@@ -85,6 +98,46 @@ body
     margin-top: -15px;
     font-size: 3.5rem;
     font-weight: bold;
+}
+
+.lang
+{
+    position: absolute;
+    z-index: var(--above-all);
+    width: 80px;
+    height: 80px;
+}
+
+@keyframes slowrotation
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    50%
+    {
+        transform: rotate(360deg);
+    }
+    100%
+    {
+        transform: rotate(0deg);
+    }
+}
+
+.clockwise
+{
+    animation: slowrotation 20s linear infinite;
+}
+
+.counterclockwise
+{
+    animation: slowrotation 20s linear reverse infinite;
+}
+
+@keyframes profilepanelgrow
+{
+    80% {transform: scale(1.1)}
+    100% {transform: scale(1)}
 }
 
 @keyframes rainbow
