@@ -10,6 +10,7 @@ async function updatePercentage()
     let loader = document.querySelector("#loader")
     let percentage = document.querySelector("#percentage")
     let loadingContent = document.querySelector("#description")
+    let profilePanel = document.querySelector("#profile")
 
     let loadingText = document.querySelector("#description")
     let loadingTextUpdater = setInterval(() =>
@@ -19,7 +20,7 @@ async function updatePercentage()
         {
             loadingText.textContent = "Loading Content"
         }
-    }, 250)
+    }, 200)
 
     let percentageUpdater = setInterval(async () =>
     {
@@ -34,8 +35,9 @@ async function updatePercentage()
             loadingContent.textContent = "DONE!"
             await sleep(1000)
             loader.remove()
+            profilePanel.classList.add("grow")
         }
-    }, 25)
+    }, 21)
 }
 
 updatePercentage()
